@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0e0e0e">
-  <meta name="description" content="FZ — персональная страница в стиле RUST.">
+  <meta name="description" content="Aguga baguca.">
   <title>FZ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,7 @@
       <nav class="nav" id="main-nav" aria-label="Основная навигация">
         <a class="nav-link active" href="#home">Главная</a>
         <a class="nav-link" href="#about">Обо мне</a>
+        <a class="nav-link" href="#steam">Steam</a>
         <a class="nav-link" href="#contacts">Связь</a>
       </nav>
       <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
@@ -97,9 +98,38 @@
         <div class="vibe-stamp"><span>FZ</span><small>GOOD<br>VIBES<br>ONLY</small></div>
       </section>
 
+      <section class="steam-section" id="steam">
+        <div class="steam-topline">
+          <div class="section-kicker">03 / steam intel</div>
+          <a class="steam-profile-link" href="https://steamcommunity.com/id/Fazzyqwerty" target="_blank" rel="noreferrer">Открыть профиль Steam ↗</a>
+        </div>
+        <div class="steam-card">
+          <div class="steam-card-header">
+            <span class="steam-live"><i></i> LIVE PROFILE TRACKER</span>
+            <span class="steam-game">RUST / PC</span>
+          </div>
+          <div class="steam-main">
+            <div>
+              <p class="steam-label">Профиль игрока</p>
+              <h2>Fazzyqwerty</h2>
+              <p class="steam-state" id="steam-state">Подключение к Steam API...</p>
+            </div>
+            <div class="steam-hours">
+              <span id="rust-hours">--</span>
+              <small>часов в Rust</small>
+            </div>
+          </div>
+          <div class="steam-progress"><span id="steam-progress"></span></div>
+          <div class="steam-footer">
+            <span>обновление <b id="steam-updated">ожидание данных</b></span>
+            <span class="steam-lock">PUBLIC DATA ONLY</span>
+          </div>
+        </div>
+      </section>
+
       <section class="contact section" id="contacts">
         <div class="contact-mark">FZ</div>
-        <div class="section-kicker">03 / communication</div>
+        <div class="section-kicker">04 / communication</div>
         <div class="contact-content">
           <h2>Будем<br><span>на связи?</span></h2>
           <p>Выбирай канал. Я рядом.</p>

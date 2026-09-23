@@ -4,6 +4,10 @@ const navLinks = document.querySelectorAll('.nav-link');
 const cursorGlow = document.querySelector('.cursor-glow');
 const introLoader = document.querySelector('.intro-loader');
 const pageShell = document.querySelector('.page-shell');
+const steamState = document.querySelector('#steam-state');
+const steamHours = document.querySelector('#rust-hours');
+const steamUpdated = document.querySelector('#steam-updated');
+const steamProgress = document.querySelector('#steam-progress');
 
 window.addEventListener('load', () => {
   window.setTimeout(() => {
@@ -11,6 +15,28 @@ window.addEventListener('load', () => {
     pageShell.classList.add('is-ready');
   }, 1350);
 });
+
+const steamApiUrl = window.STEAM_RUST_API_URL || '/api/steam-rust';
+const loadSteamHours = async () => {
+  try {
+    const response = await fetch(steamApiUrl, { headers: { Accept: 'application/json' } });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.code || `Steam API responded with ${response.status}`);
+    if (!Number.isFinite(data.rustHours)) throw new Error('Invalid Rust hours payload');
+    steamHours.textContent = Math.round(data.rustHours).toLocaleString('ru-RU');
+    steamState.textContent = 'Данные профиля получены';
+    steamUpdated.textContent = `обновлено ${new Date(data.updatedAt).toLocaleTimeString('ru-RU')}`;
+    steamProgress.style.width = `${Math.min(100, Math.max(8, data.rustHours / 100))}%`;
+  } catch (error) {
+    steamState.textContent = error.message === 'missing_api_key'
+      ? 'Ожидается настройка Steam API Key'
+      : 'Не удалось получить данные Steam';
+    steamUpdated.textContent = 'ошибка подключения';
+    console.error('Steam Rust tracker error:', error);
+  }
+};
+loadSteamHours();
+window.setInterval(loadSteamHours, 60000);
 
 menuToggle.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
