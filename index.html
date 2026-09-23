@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0e0e">
+  <meta name="description" content="FZ — персональная страница в стиле RUST.">
+  <title>FZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="intro-loader" aria-hidden="true">
+    <div class="loader-mark">FZ</div>
+    <div class="loader-line"><span></span></div>
+    <p>INITIALIZING SURVIVOR PROFILE</p>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="На главную">
+        <span class="brand-mark">FZ</span>
+        <span class="brand-copy"><strong>FZ</strong><small>survivor profile</small></span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <a class="nav-link active" href="#home">Главная</a>
+        <a class="nav-link" href="#about">Обо мне</a>
+        <a class="nav-link" href="#contacts">Связь</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-grid"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> online / survivor #07</p>
+          <div class="rasta-badge"><span></span><b>ONE LOVE / ONE LIFE</b><span></span></div>
+          <h1>F<span class="accent">Z</span></h1>
+          <p class="hero-subtitle">Выживаю. Создаю.<br><em>Не сдаюсь.</em></p>
+          <p class="hero-text">Личный уголок человека, который выбирает свой путь. Здесь — мои мысли, проекты и немного огня.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contacts">Связаться <span>↗</span></a>
+            <a class="button button-ghost" href="#about">Узнать больше <span>↓</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Место для фотографии FZ">
+          <div class="sun"></div>
+          <div class="mountains mountains-back"></div>
+          <div class="mountains mountains-front"></div>
+          <div class="photo-placeholder">
+            <img class="profile-photo" src="photo_2026-09-23_12-19-38.jpg" alt="Фото FZ">
+            <span class="photo-scanline" aria-hidden="true"></span>
+          </div>
+          <div class="coordinate">44° 36' 24" N<br>92° 10' 04" E</div>
+          <div class="vertical-label">BUILT TO SURVIVE</div>
+        </div>
+        <div class="scroll-hint"><span></span> scroll to explore</div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-kicker">01 / identity</div>
+        <div class="section-heading">
+          <h2>Кто такой <span>FZ?</span></h2>
+          <p>Не ник. Состояние.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-number">01</div>
+            <h3>Свободный<br><span>игрок</span></h3>
+            <p>Двигаюсь своим маршрутом и не жду идеального момента. Он уже наступил.</p>
+          </div>
+          <div class="about-card featured-card">
+            <div class="card-number">02</div>
+            <h3>Жёсткий<br><span>pvp игрок</span></h3>
+            <p>Играю первым номером: быстрый пуш, точный тайминг и никакого страха перед чужой территорией.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-number">03</div>
+            <h3>Всегда<br><span>на связи</span></h3>
+            <p>Напиши мне в удобном месте. Отвечу, когда выйду из рейда.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vibe-section">
+        <div class="rasta-stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="vibe-copy">
+          <div class="section-kicker">02 / state of mind</div>
+          <h2>Мой вайб —<br><span>свобода.</span></h2>
+          <p>Спокойный ритм, громкие идеи и свой путь. Без лишнего шума — только энергия, которая двигает вперёд.</p>
+        </div>
+        <div class="vibe-stamp"><span>FZ</span><small>GOOD<br>VIBES<br>ONLY</small></div>
+      </section>
+
+      <section class="contact section" id="contacts">
+        <div class="contact-mark">FZ</div>
+        <div class="section-kicker">03 / communication</div>
+        <div class="contact-content">
+          <h2>Будем<br><span>на связи?</span></h2>
+          <p>Выбирай канал. Я рядом.</p>
+          <div class="socials">
+            <a class="social-link" href="https://t.me/fzsever_07" target="_blank" rel="noreferrer">
+              <span class="social-icon">✈</span><span><small>TELEGRAM</small>@fzsever_07</span><b>↗</b>
+            </a>
+            <a class="social-link" href="https://vk.ru/kalashnikovone" target="_blank" rel="noreferrer">
+              <span class="social-icon vk-icon">vk</span><span><small>VKONTAKTE</small>kalashnikovone</span><b>↗</b>
+            </a>
+            <a class="social-link discord-link" href="https://discord.com/users/fazzyqq" target="_blank" rel="noreferrer">
+              <span class="social-icon discord-icon">◌</span><span><small>DISCORD</small>fazzyqq</span><b>↗</b>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 FZ / ALL RIGHTS RESERVED</span>
+      <span>DESIGNED & DEVELOPED <strong>BY NEONOV</strong></span>
+    </footer>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <script src="javascript.js"></script>
+</body>
+</html>
