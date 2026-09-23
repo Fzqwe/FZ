@@ -43,3 +43,52 @@ h1 { filter: drop-shadow(0 0 8px rgba(225,61,47,.28)); font-family: "Barlow Cond
 @media (prefers-reduced-motion: reduce) { .about-card, .about-card:after { animation: none; } }
 @media (max-width: 700px) { .topbar { height: 70px; padding: 0 7vw; }.nav { background: #151515; box-shadow: 0 0 25px rgba(225,61,47,.25); flex-direction: column; gap: 8px; padding: 25px; position: absolute; right: 7vw; top: 61px; transform: translateY(-20px); transition: .25s; visibility: hidden; opacity: 0; }.nav.open { opacity: 1; transform: translateY(0); visibility: visible; }.menu-toggle { display: block; }.hero { min-height: 780px; padding: 150px 8vw 100px; }.hero-copy { max-width: 100%; }.rasta-badge { margin-top: 18px; }.hero-visual { height: 42%; right: -20%; width: 95%; }.photo-placeholder { height: 57%; top: 18%; width: 40%; }.sun { height: 250px; width: 250px; }.hero-text { max-width: 260px; }.scroll-hint { left: 8vw; }.section { padding: 85px 8vw; }.section-heading { align-items: start; flex-direction: column; gap: 18px; }.about-grid { grid-template-columns: 1fr; }.about-card { min-height: 220px; }.about-card h3 { margin-top: 45px; }.vibe-section { align-items: flex-start; flex-direction: column; gap: 50px; min-height: 500px; padding: 85px 8vw; }.vibe-section:before { inset: 16px; }.vibe-stamp { align-self: flex-end; height: 130px; width: 130px; }.contact { min-height: 600px; }.contact:before { top: 45%; }.socials { flex-direction: column; }.footer { align-items: flex-start; flex-direction: column; gap: 12px; padding: 25px 8vw; } }
 @media (max-width: 700px) { .steam-section { padding-left: 8vw; padding-right: 8vw; }.steam-topline { align-items: flex-start; flex-direction: column; gap: 18px; }.steam-card { padding: 20px; }.steam-main { align-items: flex-start; flex-direction: column; gap: 45px; }.steam-hours { text-align: left; } }
+@media (max-width: 480px) {
+  body { overflow-x: hidden; }
+  .topbar { height: 64px; }
+  .brand-mark { height: 38px; width: 38px; }
+  .brand-copy strong { font-size: 15px; }
+  .brand-copy small { font-size: 7px; }
+  .hero { min-height: 760px; padding: 125px 7vw 80px; }
+  .hero:after { inset: 10px; }
+  .hero-grid { inset: 0; opacity: .28; }
+  .hero-copy { max-width: 100%; }
+  .eyebrow { font-size: 8px; }
+  .rasta-badge { gap: 6px; margin-top: 18px; }
+  .rasta-badge b { font-size: 7px; }
+  h1 { font-size: clamp(120px, 39vw, 170px); margin: 42px 0 24px; }
+  .hero-subtitle { font-size: 25px; }
+  .hero-text { font-size: 11px; max-width: 245px; }
+  .hero-actions { align-items: stretch; flex-direction: column; max-width: 220px; }
+  .button { justify-content: space-between; padding: 14px 16px; }
+  .hero-visual { bottom: 12px; height: 34%; right: -26%; width: 108%; }
+  .sun { height: 220px; right: 17%; top: 3%; width: 220px; }
+  .photo-placeholder { height: 68%; right: 15%; top: 12%; width: 39%; }
+  .coordinate { bottom: 5%; font-size: 9px; right: 3%; }
+  .vertical-label { display: none; }
+  .scroll-hint { bottom: 20px; font-size: 8px; }
+  .section { padding: 72px 7vw; }
+  .section-heading { margin-bottom: 38px; }
+  .section-heading h2, .contact h2, .vibe-copy h2 { font-size: 54px; }
+  .section-heading p { font-size: 8px; }
+  .about-grid { gap: 12px; }
+  .about-card { min-height: 215px; padding: 24px; }
+  .about-card h3 { font-size: 32px; margin: 44px 0 15px; }
+  .about-card p { font-size: 10px; }
+  .vibe-section { gap: 35px; min-height: 470px; padding: 72px 9vw; }
+  .vibe-copy p { font-size: 11px; max-width: 270px; }
+  .vibe-stamp { height: 120px; width: 120px; }
+  .steam-section { padding: 72px 7vw; }
+  .steam-section:before { left: 7vw; right: 7vw; }
+  .steam-card { padding: 18px; }
+  .steam-card-header, .steam-footer { font-size: 7px; letter-spacing: .1em; }
+  .steam-main { gap: 34px; padding: 32px 0 24px; }
+  .steam-main h2 { font-size: 52px; overflow-wrap: anywhere; }
+  .steam-state { font-size: 10px; line-height: 1.5; max-width: 220px; }
+  .steam-hours span { font-size: 72px; }
+  .steam-footer { align-items: flex-start; flex-direction: column; gap: 10px; line-height: 1.4; }
+  .contact { min-height: 650px; }
+  .contact h2 { font-size: 58px; }
+  .social-link { padding: 16px; }
+  .footer { font-size: 7px; letter-spacing: .1em; }
+}
